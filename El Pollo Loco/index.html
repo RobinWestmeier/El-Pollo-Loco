@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El polo loco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">
+    <script src="classes/drawable-object.class.js"></script>
+    <script src="classes/statusbar.class.js"></script>
+    <script src="classes/statusbar-coins.class.js"></script>
+    <script src="classes/statusbar-bottles.class.js"></script>
+    <script src="classes/statusbar-endboss.class.js"></script>
+    <script src="classes/movable-object.class.js"></script>
+    <script src="classes/character.class.js"></script>
+    <script src="classes/chicken.class.js"></script>
+    <script src="classes/small-chicken.class.js"></script>
+    <script src="classes/cloud.class.js"></script>
+    <script src="classes/world.class.js"></script>
+    <script src="classes/background-object.class.js"></script>
+    <script src="classes/keyboard.class.js"></script>
+    <script src="classes/level.class.js"></script>
+    <script src="classes/endboss.class.js"></script>
+    <script src="classes/coins.class.js"></script>
+    <script src="classes/throwable-object.class.js"></script>
+    <script src="classes/bottle.class.js"></script>
+    <script src="levels/level1.js"></script>
+    <script src="js/game.js"></script>
+
+</head>
+
+<body id="fullscreen" onload="hideGameOverScreen()">
+
+    <div id="orientation-alert" class="orientation-alert">
+        <img src="img/10_buttons/rotate.png" alt="Please rotate your device">
+        <p>Please rotate your device</p>
+    </div>
+    <h1>El pollo loco</h1>
+
+    <div id="start-screen-container" class="start-screen-container">
+
+        <div id="start-screen" class="start-screen">
+
+            <div id="buttons" class="buttons">
+                <button id="mute" onclick="toggleMuted()" class="button mute"></button>
+                <button id="restart-button" onclick="startGame()" class="button start"></button>
+                <button id="fullscreen" onclick="fullscreen()" class="button fullscreen"></button>
+            </div>
+
+            <button id="start-button" class="start-button" onclick="startGame()">Start Game</button>
+
+            <div class="legal-container">
+                <a href="impressum.html" target="_blank">Impressum</a>
+                <a href="privacy_policy.html" target="_blank">Datenschutz</a>
+            </div>
+
+            <div id="instructions" class="instructions">
+                <p class="instructions-text">Arrow keys to move</p>
+                <p class="instructions-text">Space bar to jump</p>
+                <p class="instructions-text">D-key: throw bottle</p>
+                <div class="instructions-mobile d-none" id="instructions-mobile">
+                    <div class="instructions-buttons-left">
+                        <button class="mobile-left mobile-button" id="mobile-left"></button>
+                        <button class="mobile-right mobile-button" id="mobile-right"></button>
+                    </div>
+                    <div class="instructions-buttons-right">
+                        <button class="mobile-up mobile-button" id="mobile-up"></button>
+                        <button class="mobile-throw mobile-button" id="mobile-throw"></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="game-over-screen-container" class="game-over-screen-container">
+        <div id="game-over-screen" class="game-over-screen"></div>
+    </div>
+
+    <canvas class="canvas" id="canvas" width="720px" height="480px"></canvas>
+
+
+</body>
+
+</html>
